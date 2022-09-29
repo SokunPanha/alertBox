@@ -1,0 +1,83 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background: url("https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg") fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+button{
+    position: relative;
+    top: 50%;
+    left: 200px;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: .3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button:active{
+    transform: scale(1.04);
+    background-color: rgb(122, 122, 122);
+    color: white;
+}
+
+.alert-box{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 250px;
+    background-color: white;
+    border-radius: 5px;
+}
+.overlay{
+    animation: pop .4s;
+    position: relative;
+    width: 100%;
+    display: none;
+    height: auto;
+    justify-content: center;
+    
+}
+.overlay_open{
+    display: block;
+}
+.overlay_close{
+    display: block;
+    animation: popup .4s;
+    animation-fill-mode: forwards;
+}
+@keyframes popup {
+    from{
+        top: 0;
+        opacity: 1;
+    }
+    to{
+        top: -200px;
+        opacity: 0;
+      
+    }
+}
+@keyframes pop {
+    from{
+        opacity: 0;
+        top: -100px;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+.fa-xmark{
+    font-size: 25px;
+    margin-left: 20px;
+}
